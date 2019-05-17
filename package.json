@@ -1,0 +1,19 @@
+{
+  "name": "snips-actions-runner",
+  "version": "0.0.1",
+  "description": "Snips javascript actions runner.",
+  "main": "src/index.js",
+  "bin": {
+    "snips-runner": "./cli.js"
+  },
+  "author": "Julien Elbaz",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "snips-toolkit": "^0.0.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
