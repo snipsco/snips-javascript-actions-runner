@@ -1,7 +1,7 @@
 dependencies:
   chalk: 2.4.2
   commander: 2.20.0
-  snips-toolkit: 0.1.0
+  snips-toolkit: 0.1.1
 devDependencies:
   eslint: 5.16.0
 lockfileVersion: 5
@@ -5730,7 +5730,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==
-  /snips-toolkit/0.1.0:
+  /snips-toolkit/0.1.1:
     dependencies:
       '@babel/core': 7.4.4
       '@babel/plugin-proposal-class-properties': 7.4.4_@babel+core@7.4.4
@@ -5763,7 +5763,7 @@ packages:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-/jMSqFe/4k8xO2OyDfW7QKNyQ1d+WST9/3JzKPe5dBeRg06A5GhbsZ5Y1gbuTEEu24/PW0fGzykhUuYWE/iB5Q==
+      integrity: sha512-wXQwe8CG0PejoGgir19R0jtTVPSfi1niYvnLN4PYUtChsSp9wnUpODi/DPgUhMXEVZ10+k6RvNvBtZeUQKWL7A==
   /source-list-map/2.0.1:
     dev: false
     resolution:
@@ -6794,4 +6794,4 @@ specifiers:
   chalk: ^2.4.2
   commander: ^2.20.0
   eslint: ^5.16.0
-  snips-toolkit: ^0.1.0
+  snips-toolkit: ^0.1.1
