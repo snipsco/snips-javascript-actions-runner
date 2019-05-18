@@ -40,7 +40,7 @@ fs.readdirSync(actionsRoot, { withFileTypes: true }).forEach(entry => {
     if(!entry.isDirectory())
         return
     try {
-        const packageFilePath = path.join(actionsRoot, entry.name, 'package.json')
+        const packageFilePath = path.resolve(actionsRoot, entry.name, 'package.json')
         if(!fs.existsSync(packageFilePath))
             return
         const { name, main, dependencies } = require(packageFilePath)
@@ -53,20 +53,22 @@ fs.readdirSync(actionsRoot, { withFileTypes: true }).forEach(entry => {
             })
         }
     } catch (error) {
-        console.error(chalk.bold.red('!> Error while browsing '), chalk.bold.red(entry), chalk.red(error))
+        console.error(chalk.bold.red('!> Error while browsing '), chalk.bold.red(entry.name), chalk.red(error))
     }
 })
 
-function runAction ({ name, root: cwd, main}) {
+async function runAction (action) {
+    const { name, root: cwd, main } = action
     const target = path.resolve(cwd, main)
     console.log('Running action: "' + name + '"…')
     try {
-        runners.sandboxedRunner({
+        const done = await runners.sandboxedRunner({
             runnerOptions: {
                 cwd,
                 target
             }
         })
+        action.done = done
     } catch (error) {
         console.error(chalk.bold.red('!> Error occured while running action "' + name + '"'), chalk.red(error))
     }
@@ -78,6 +80,10 @@ process.on('uncaughtException', (err) => {
     ))
     console.error(chalk.bold.red('!> Unhandled error occured while running action'+ (action && (' "' + action.name + '".') || '.')) + '\n', chalk.red(err))
     if(action) {
+        if(typeof action.done === 'function') {
+            action.done()
+        }
+        action.done = null
         let counter = 0
         if(!crashCounters.has(action.name)) {
             crashCounters.set(action.name, 1)
@@ -98,7 +104,7 @@ process.on('uncaughtException', (err) => {
 })
 
 process.on('unhandledRejection', (reason, p) => {
-    console.log(chalk.bold.warning('?> Unhandled Rejection at:'), chalk.bold.warning(p), chalk.bold.warning('reason:'), chalk.bold.warning(reason))
+    console.log(chalk.bold.red('?> Unhandled Rejection at:'), chalk.bold.red(p), chalk.bold.red('reason:'), chalk.bold.red(reason))
 })
 
 actions.forEach(runAction)
