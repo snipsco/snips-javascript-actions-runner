@@ -9,9 +9,9 @@ The way the `skill-server` works is that it runs one process per-action.
 
 It means that a `node.js` instance is spawned and bindings to the hermes library are created for each action.
 
-**This is perfectly fine is mosts cases**, but when the number of actions to run is huge or if the environment is memory constrained this can become a problem.
+**This is perfectly fine in mosts cases**, but when the number of actions to run is huge or if the environment is memory constrained it can become a problem.
 
-This package is an attempt to mitigate memory issues by running every javascript action using a single process.
+This package is an attempt to mitigate these memory issues by running every javascript action using a single process.
 
 ## Setup
 
