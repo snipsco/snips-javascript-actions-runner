@@ -23,7 +23,7 @@ This package is an attempt to mitigate these memory issues by running every java
 
 ### Root folder
 
-By default, the runner will look for actions in the `/var/lib/snips/skills` folder on linux, or `/var/lib/snips/skills` for macos.
+By default the runner will look for actions in the `/var/lib/snips/skills` folder on Linux, or `/usr/local/var/snips/skills` on OSX.
 
 For other oses, use the `-r` option to specify the root folder.
 
