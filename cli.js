@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const program = require('commander')
 const chalk = require('chalk')
-const runners = require('snips-toolkit/dist/runner/index')
+const runners = require('snips-toolkit-runner')
 
 const MAX_CRASHES = 3
 const CRASH_DELAY = 10000
