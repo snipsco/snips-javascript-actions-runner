@@ -43,8 +43,11 @@ fs.readdirSync(actionsRoot, { withFileTypes: true }).forEach(entry => {
         const packageFilePath = path.resolve(actionsRoot, entry.name, 'package.json')
         if(!fs.existsSync(packageFilePath))
             return
-        const { name, main, dependencies } = require(packageFilePath)
-        if(main && dependencies && dependencies['snips-toolkit']) {
+        const { name, main, dependencies, devDependencies } = require(packageFilePath)
+        const usesToolkit =
+            dependencies && dependencies['snips-toolkit'] ||
+            devDependencies && devDependencies['snips-toolkit']
+        if(main && usesToolkit) {
             console.log(chalk.green.bold('Found action: "' + name + '".'))
             actions.push({
                 name,

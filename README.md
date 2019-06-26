@@ -32,7 +32,7 @@ For other oses, use the `-r` option to specify the root folder.
 Each subfolder will then be scanned, and will be considered as an action **if and only if**:
 
 1) It contains a `package.json` file.
-2) The `package.json` file has a `dependency` field that contains the [`snips-toolkit`](https://github.com/snipsco/snips-javascript-toolkit) package.
+2) The `package.json` file has a `dependencies` or `devDependencies` field that contains the [`snips-toolkit`](https://github.com/snipsco/snips-javascript-toolkit) package.
 3) The `package.json` file has a `main` field.
 
 The file linked with the `main` field is then launched using a global `snips-toolkit` package ([in the same fashion as the run command](https://github.com/snipsco/snips-javascript-toolkit#snips-toolkit-run)).
