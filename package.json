@@ -1,6 +1,6 @@
 {
   "name": "snips-actions-runner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Snips javascript actions runner.",
   "main": "cli.js",
   "bin": {
