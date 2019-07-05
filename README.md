@@ -41,4 +41,16 @@ The file linked with the `main` field is then launched using a global `snips-too
 
 `snips-runner --help`
 
+## Configuration file
 
+In order to pass custom [hermes options](https://github.com/snipsco/hermes-protocol/tree/develop/platforms/hermes-javascript#hermes-class), you can use the `-c` flag to specify the path to a configuration file.
+
+For instance, if you are using an mqtt broker running on a different machine:
+
+```json
+{
+    "hermesOptions": {
+        "address": "machineAddress:1883"
+    }
+}
+```

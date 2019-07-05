@@ -25,16 +25,34 @@ const defaultRoot =
 
 program
     .option('-r, --actions-root <path>', 'path to the folder containing actions', defaultRoot)
+    .option('-c --config-path <path>', 'path to the configuration file')
 
 program.parse(process.argv)
 
-const { actionsRoot } = program
+const { actionsRoot, configPath } = program
 
-if(!actionsRoot || !fs.existsSync(actionsRoot))
-    throw new Error('Invalid path: ' + actionsRoot)
+if(!actionsRoot || !fs.existsSync(actionsRoot)) {
+    console.error(chalk.bold.red('!> Invalid path: ' + actionsRoot))
+    process.exit(1)
+}
+
+if(configPath && !fs.existsSync(configPath)) {
+    console.error(chalk.bold.red('!> Invalid configuration file path: '+ configPath))
+    process.exit(1)
+}
 
 const actions = []
 const crashCounters = new Map()
+
+let config = {}
+if(configPath) {
+    try {
+        config = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
+    } catch (error) {
+        console.error(chalk.bold.red('!> Invalid configuration file format. Expected an utf-8 encoded JSON file.\n' + error.toString()))
+        process.exit(1)
+    }
+}
 
 fs.readdirSync(actionsRoot, { withFileTypes: true }).forEach(entry => {
     if(!entry.isDirectory())
@@ -66,6 +84,7 @@ async function runAction (action) {
     console.log('Running action: "' + name + '"…')
     try {
         const done = await runners.sandboxedRunner({
+            ...config,
             runnerOptions: {
                 cwd,
                 target
