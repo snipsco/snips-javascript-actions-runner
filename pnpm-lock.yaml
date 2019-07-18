@@ -1,41 +1,42 @@
 dependencies:
   chalk: 2.4.2
   commander: 2.20.0
-  snips-toolkit-runner: 1.0.0
+  snips-toolkit-runner: 1.0.1
 devDependencies:
   eslint: 5.16.0
+  node-deb: 0.10.7
 lockfileVersion: 5.1
 packages:
-  /@babel/code-frame/7.0.0:
+  /@babel/code-frame/7.5.5:
     dependencies:
-      '@babel/highlight': 7.0.0
+      '@babel/highlight': 7.5.0
     dev: true
     resolution:
-      integrity: sha512-OfC2uemaknXr87bdLUkWog7nYuliM9Ij5HUcajsVcMCpQrcLmtxRbVFTIqmcSkSeYRBFBRxs2FiUqFJDLdiebA==
-  /@babel/highlight/7.0.0:
+      integrity: sha512-27d4lZoomVyo51VegxI20xZPuSHusqbQag/ztrBC7wegWoQ1nLREPVSKSW8byhTlzTKyNE4ifaTA6lCp7JjpFw==
+  /@babel/highlight/7.5.0:
     dependencies:
       chalk: 2.4.2
       esutils: 2.0.2
       js-tokens: 4.0.0
     dev: true
     resolution:
-      integrity: sha512-UFMC4ZeFC48Tpvj7C8UgLvtkaUuovQX+5xNWrsIoMG8o2z+XFKjKaN9iVmS84dPwVN00W4wPmqvYoZF3EGAsfw==
-  /acorn-jsx/5.0.1_acorn@6.1.1:
+      integrity: sha512-7dV4eu9gBxoM0dAnj/BCFDW9LFU0zvTrkq0ugM7pnHEgguOEeOz1so2ZghEdzviYzQEED0r4EAgpsBChKy1TRQ==
+  /acorn-jsx/5.0.1_acorn@6.2.0:
     dependencies:
-      acorn: 6.1.1
+      acorn: 6.2.0
     dev: true
     peerDependencies:
       acorn: ^6.0.0
     resolution:
       integrity: sha512-HJ7CfNHrfJLlNTzIEUTj43LNWGkqpRLxm3YjAlcD0ACydk9XynzYsCBHxut+iqt+1aBXkx9UP/w/ZqMr13XIzg==
-  /acorn/6.1.1:
+  /acorn/6.2.0:
     dev: true
     engines:
       node: '>=0.4.0'
     hasBin: true
     resolution:
-      integrity: sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
-  /ajv/6.10.0:
+      integrity: sha512-8oe72N3WPMjA+2zVG71Ia0nXZ8DpQH+QyyHO+p06jT8eg8FGG3FbcUIi8KziHlAfheJQZeoqbvq1mQSQHXKYLw==
+  /ajv/6.10.2:
     dependencies:
       fast-deep-equal: 2.0.1
       fast-json-stable-stringify: 2.0.0
@@ -43,7 +44,7 @@ packages:
       uri-js: 4.2.2
     dev: true
     resolution:
-      integrity: sha512-nffhOpkymDECQyR0mnsUtoCE8RlX38G0rYP+wgLWFyZuUyuuojSSvi/+euOiQBIn63whYwYVIIH1TvE3tu4OEg==
+      integrity: sha512-TXtUUEYHuaTEbLZWIKUr5pmBuhDLy+8KYtPYdcV8qC+pOZL+NKqYwvWSRrVXHn+ZmRRAu8vJTAznH7Oag6RVRw==
   /ansi-escapes/3.2.0:
     dev: true
     engines:
@@ -236,12 +237,14 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==
-  /eslint-utils/1.3.1:
+  /eslint-utils/1.4.0:
+    dependencies:
+      eslint-visitor-keys: 1.0.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-Z7YjnIldX+2XMcjr7ZkgEsOj/bREONV60qYeB/bjMAqqqZ4zxKyWX+BOUkdmRmA9riiIPVvo5x86m5elviOk0Q==
+      integrity: sha512-7ehnzPaP5IIEh1r1tkjuIrxqhNkzUJa9z3R92tLJdZIVdWaczEhr3EbhGtsMrVxi1KeR8qA7Off6SWc5WNQqyQ==
   /eslint-visitor-keys/1.0.0:
     dev: true
     engines:
@@ -250,14 +253,14 @@ packages:
       integrity: sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
   /eslint/5.16.0:
     dependencies:
-      '@babel/code-frame': 7.0.0
-      ajv: 6.10.0
+      '@babel/code-frame': 7.5.5
+      ajv: 6.10.2
       chalk: 2.4.2
       cross-spawn: 6.0.5
       debug: 4.1.1
       doctrine: 3.0.0
       eslint-scope: 4.0.3
-      eslint-utils: 1.3.1
+      eslint-utils: 1.4.0
       eslint-visitor-keys: 1.0.0
       espree: 5.0.1
       esquery: 1.0.1
@@ -267,13 +270,13 @@ packages:
       glob: 7.1.4
       globals: 11.12.0
       ignore: 4.0.6
-      import-fresh: 3.0.0
+      import-fresh: 3.1.0
       imurmurhash: 0.1.4
-      inquirer: 6.3.1
+      inquirer: 6.5.0
       js-yaml: 3.13.1
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.3.0
-      lodash: 4.17.11
+      lodash: 4.17.14
       minimatch: 3.0.4
       mkdirp: 0.5.1
       natural-compare: 1.4.0
@@ -284,7 +287,7 @@ packages:
       semver: 5.7.0
       strip-ansi: 4.0.0
       strip-json-comments: 2.0.1
-      table: 5.4.1
+      table: 5.4.4
       text-table: 0.2.0
     dev: true
     engines:
@@ -294,8 +297,8 @@ packages:
       integrity: sha512-S3Rz11i7c8AA5JPv7xAH+dOyq/Cu/VXHiHXBPOU1k/JAM5dXqQPt3qcrhpHSorXmrpu2g0gkIBVXAqCpzfoZIg==
   /espree/5.0.1:
     dependencies:
-      acorn: 6.1.1
-      acorn-jsx: 5.0.1_acorn@6.1.1
+      acorn: 6.2.0
+      acorn-jsx: 5.0.1_acorn@6.2.0
       eslint-visitor-keys: 1.0.0
     dev: true
     engines:
@@ -337,7 +340,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
-  /external-editor/3.0.3:
+  /external-editor/3.1.0:
     dependencies:
       chardet: 0.7.0
       iconv-lite: 0.4.24
@@ -346,7 +349,7 @@ packages:
     engines:
       node: '>=4'
     resolution:
-      integrity: sha512-bn71H9+qWoOQKyZDo25mOMVpSmXROAsTJVVVYzrrtol3d4y+AsKjf4Iwl2Q+IuT0kFSQ1qo166UuIwqYq7mGnA==
+      integrity: sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==
   /fast-deep-equal/2.0.1:
     dev: true
     resolution:
@@ -359,6 +362,19 @@ packages:
     dev: true
     resolution:
       integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
+  /ffi/2.3.0:
+    dependencies:
+      bindings: 1.2.1
+      debug: 2.6.9
+      nan: 2.14.0
+      ref: 1.3.5
+      ref-struct: 1.1.0
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-vkPA9Hf9CVuQ5HeMZykYvrZF2QNJ/iKGLkyDkisBnoOOFeFXZQhUPxBARPBIZMJVulvBI2R+jgofW03gyPpJcQ==
   /figures/2.0.0:
     dependencies:
       escape-string-regexp: 1.0.5
@@ -381,7 +397,7 @@ packages:
       integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
   /flat-cache/2.0.1:
     dependencies:
-      flatted: 2.0.0
+      flatted: 2.0.1
       rimraf: 2.6.3
       write: 1.0.3
     dev: true
@@ -389,10 +405,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-LoQe6yDuUMDzQAEH8sgmh4Md6oZnc/7PjtwjNFSzveXqSHt6ka9fPBuso7IGf9Rz4uqnSnWiFH2B/zj24a5ReA==
-  /flatted/2.0.0:
+  /flatted/2.0.1:
     dev: true
     resolution:
-      integrity: sha512-R+H8IZclI8AAkSBRQJLVOsxwAoHd6WC40b4QTNWIjzAa6BXOBfQcM587MXDTVPeYaopFNWHUFLx7eNmHDSxMWg==
+      integrity: sha512-a1hQMktqW9Nmqr5aktAux3JMNqaucxGcjtjWnZLHX7yyPCmlSV3M54nGYbqT8K+0GhF3NBgmJCc3ma+WOgX8Jg==
   /fs.realpath/1.0.0:
     resolution:
       integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
@@ -421,23 +437,23 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
-  /hermes-javascript/0.3.12:
+  /hermes-javascript/0.3.14:
     dependencies:
       chalk: 2.4.2
-      ffi: github.com/node-ffi/node-ffi/d9b843c03b35b99f205d001ebcbedd1b6c63b3d0
+      ffi: 2.3.0
       node-fetch: 2.6.0
       node-int64: 0.4.0
       ref: 1.3.5
       ref-array: 1.2.0
       ref-struct: 1.1.0
       tmp: 0.1.0
-      wretch: 1.5.2
+      wretch: 1.5.4
     dev: false
     engines:
       node: '>=10'
     requiresBuild: true
     resolution:
-      integrity: sha512-Qxt+twDr5eIuTn2YSI0bDFsIkPTxVh7k7nSRJAtO55NgsCfxf3unj4yr9yhcQ/q0mmXR/2mUtpdnKUz1Gu9m9A==
+      integrity: sha512-abShfA7z1vnsIaOdhF5d3YV7oiLpoy223uOONGC7O5bO9XCINzMWBMJedqvwRW/QGXuASUGfxAgFbAAfO1R6xg==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -452,7 +468,7 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
-  /import-fresh/3.0.0:
+  /import-fresh/3.1.0:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
@@ -460,7 +476,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-pOnA9tfM3Uwics+SaBLCNyZZZbK+4PTu0OPZtLlMIrv17EdBoC15S9Kn8ckJ9TZTyKb3ywNE5y1yeDxxGA7nTQ==
+      integrity: sha512-PpuksHKGt8rXfWEr9m9EHIpgyyaltBy8+eF6GJM0QCAxMgxCfucMF3mjecK2QsJr0amJW7gTqh5/wht0z2UhEQ==
   /imurmurhash/0.1.4:
     dev: true
     engines:
@@ -476,15 +492,15 @@ packages:
   /inherits/2.0.4:
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
-  /inquirer/6.3.1:
+  /inquirer/6.5.0:
     dependencies:
       ansi-escapes: 3.2.0
       chalk: 2.4.2
       cli-cursor: 2.1.0
       cli-width: 2.2.0
-      external-editor: 3.0.3
+      external-editor: 3.1.0
       figures: 2.0.0
-      lodash: 4.17.11
+      lodash: 4.17.14
       mute-stream: 0.0.7
       run-async: 2.3.0
       rxjs: 6.5.2
@@ -495,7 +511,7 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-MmL624rfkFt4TG9y/Jvmt8vdmOo836U7Y0Hxr2aFk3RelZEGX4Igk0KabWrcaaZaTv9uzglOqWh1Vly+FAWAXA==
+      integrity: sha512-scfHejeG/lVZSpvCXpsB4j/wQNPM5JC8kiElOI0OUTwmc1RTpXr4H32/HOlQHcZiYl2z2VElwuCVDRG8vFmbnA==
   /is-fullwidth-code-point/2.0.0:
     dev: true
     engines:
@@ -539,10 +555,10 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
-  /lodash/4.17.11:
+  /lodash/4.17.14:
     dev: true
     resolution:
-      integrity: sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+      integrity: sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
   /mimic-fn/1.2.0:
     dev: true
     engines:
@@ -592,6 +608,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+  /node-deb/0.10.7:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-MEXsGSjNcf7HVkaId8wIBjmEa5l1FuLR+KYr84n4RIDj9gDF9VwxU0gvV+9fUYYmZZ9bP+1MvDDOz/ELrMizAA==
   /node-fetch/2.6.0:
     dev: false
     engines:
@@ -779,14 +800,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Qu+VC3EwYLldKa1fCxuuvULvSJOKEgk9pi8dZeCVK7TqBfUNTH4sFkk4joj8afVSfAYgJoSOetjx9QWOJ5mYoQ==
-  /snips-toolkit-runner/1.0.0:
+  /snips-toolkit-runner/1.0.1:
     dependencies:
       debug: 4.1.1
-      hermes-javascript: 0.3.12
+      hermes-javascript: 0.3.14
       vm2: 3.8.2
     dev: false
     resolution:
-      integrity: sha512-6V07IPGS5xYZ4k/9abSFdkrC0x6X15jN1GEwidiV8WuVxlei9XW3KIV76u7ugJqDKn2RxkgbQWWOqkueQ8i7bQ==
+      integrity: sha512-EGbAI+TwiZhkFoRn2uWp55g2mrHdtqiQaQWMLaJOShyDtv79akgPYgG8dHrNMfKbGsZlAt0nhW9NdGNhyGOzNg==
   /sprintf-js/1.0.3:
     dev: true
     resolution:
@@ -839,17 +860,17 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
-  /table/5.4.1:
+  /table/5.4.4:
     dependencies:
-      ajv: 6.10.0
-      lodash: 4.17.11
+      ajv: 6.10.2
+      lodash: 4.17.14
       slice-ansi: 2.1.0
       string-width: 3.1.0
     dev: true
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-E6CK1/pZe2N75rGZQotFOdmzWQ1AILtgYbMAbAjvms0S1l5IDB47zG3nCnFGB/w+7nB3vKofbLXCH7HPBo864w==
+      integrity: sha512-IIfEAUx5QlODLblLrGTTLJA7Tk0iLSGBvgY8essPRVNGHAzThujww1YqHLs6h3HfTg55h++RzLHH5Xw/rfv+mg==
   /text-table/0.2.0:
     dev: true
     resolution:
@@ -917,10 +938,10 @@ packages:
   /wrappy/1.0.2:
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
-  /wretch/1.5.2:
+  /wretch/1.5.4:
     dev: false
     resolution:
-      integrity: sha512-yHFHZVK3aiwtW4dMW4LpN7hJJepCbbYJTFutOfWZLfBSTsjLJa8cobPmSh6AgTEIMwryHeiJcHG+lP1IZHG2vg==
+      integrity: sha512-FvH5xhARbAO7rfu6jUEQSpAp/eRFBjhat9PGyiXz2JwBvVC9Z0gNGRSNaaLWagslnJj+xo3JTAAQ0aZAgZ7gNg==
   /write/1.0.3:
     dependencies:
       mkdirp: 0.5.1
@@ -929,23 +950,9 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
-  github.com/node-ffi/node-ffi/d9b843c03b35b99f205d001ebcbedd1b6c63b3d0:
-    dependencies:
-      bindings: 1.2.1
-      debug: 2.6.9
-      nan: 2.14.0
-      ref: 1.3.5
-      ref-struct: 1.1.0
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    name: ffi
-    requiresBuild: true
-    resolution:
-      tarball: 'https://codeload.github.com/node-ffi/node-ffi/tar.gz/d9b843c03b35b99f205d001ebcbedd1b6c63b3d0'
-    version: 2.3.0
 specifiers:
   chalk: ^2.4.2
   commander: ^2.20.0
   eslint: ^5.16.0
+  node-deb: ^0.10.7
   snips-toolkit-runner: ^1.0.0

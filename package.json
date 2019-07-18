@@ -8,12 +8,24 @@
   },
   "author": "Julien Elbaz",
   "license": "MIT",
+  "scripts": {
+    "deb": "node-deb -- cli.js"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "snips-toolkit-runner": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "node-deb": "^0.10.7"
+  },
+  "node_deb": {
+    "user": "_snips-skills",
+    "group": "_snips-skills",
+    "install_strategy": "npm-install",
+    "entrypoints": {
+      "daemon": "cli.js"
+    }
   }
 }
